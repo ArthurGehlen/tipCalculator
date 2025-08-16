@@ -10,6 +10,7 @@ import Result from "./components/Result";
 // Images
 import logo from "./images/logo.svg";
 import icon_dollar from "./images/icon-dollar.svg";
+import icon_person from "./images/icon-person.svg"
 
 const tip_options = [5, 10, 15, 25, 50];
 
@@ -24,13 +25,16 @@ function App() {
             <div className="info_section">
               <InputContainer label="Bill" img={icon_dollar} />
 
-              {/* <div className="tip_container">
-                {tip_options.map((tip, index) => (
-                  <TipContainer tip={tip} key={index} />
-                ))}
+              <div className="tip_container">
+                <p className="tip_title">Select Tip %</p>
+                <div className="tips">
+                  {tip_options.map((tip, index) => (
+                    <TipContainer tip={tip} key={index} />
+                  ))}
+                </div>
               </div>
 
-              <InputContainer label="Number of people" /> */}
+              <InputContainer label="Number of people" img={icon_person} />
             </div>
           </section>
 
