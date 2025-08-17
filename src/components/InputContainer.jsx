@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import "./InputContainer.css";
 
-function InputContainer({ label, img }) {
+function InputContainer({ label, img, name, handle_change }) {
   return (
     <div className="input_container">
       <label htmlFor={label}>{label}</label>
@@ -10,7 +10,13 @@ function InputContainer({ label, img }) {
         <div className="image_container">
           <img src={img} alt="Icon" style={{ maxWidth: "2rem" }} />
         </div>
-        <input type="number" placeholder="0" name={label} id={label} />
+        <input
+          onChange={handle_change}
+          type="number"
+          placeholder="0"
+          name={name}
+          id={label}
+        />
       </div>
     </div>
   );
@@ -18,6 +24,8 @@ function InputContainer({ label, img }) {
 
 InputContainer.PropTypes = {
   label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  handle_change: PropTypes.func,
 };
 
 export default InputContainer;

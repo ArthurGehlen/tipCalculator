@@ -1,0 +1,24 @@
+#result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#result:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
+#result .label_section p {
+    color: hsl(0, 100%, 100%);
+    font-size: .95rem;
+}
+
+#result .label_section span {
+    color: hsl(184, 14%, 56%);
+    font-size: .85rem;
+}
+
+#result .total {
+    font-size: 2.75rem;
+    color: hsl(172, 67%, 45%);
+}
