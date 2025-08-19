@@ -1,13 +1,9 @@
 import PropTypes from "prop-types";
+import { dollar } from "./utils/MoneyFormatter";
 
 import "./Result.css";
 
 function Result({ label, total = 0.0 }) {
-  const dollar = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  });
-
   return (
     <div id="result">
       <div className="label_section">
