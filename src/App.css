@@ -132,3 +132,14 @@ body {
 #main_container #results_container button:hover {
   background-color: hsl(185, 41%, 84%);
 }
+
+@media screen and (max-width: 468px) {
+  #main_container {
+    width: 100vw !important;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  #main_container #results_container button {
+    margin-top: 1rem;
+  }
+}

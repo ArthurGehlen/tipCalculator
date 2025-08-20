@@ -61,6 +61,7 @@ function App() {
               name="bill"
               img={icon_dollar}
               handle_change={handle_change}
+              value={infos.bill}
             />
 
             <div className="tip_container">
@@ -71,12 +72,13 @@ function App() {
                     tip={tip}
                     key={index}
                     onClick={() => setInfos((prev) => ({ ...prev, tip }))}
+                    selected={infos.tip === tip}
                   />
                 ))}
                 <input
                   type="number"
-                  className=""
                   placeholder="Custom"
+                  value={infos.tip === 0 ? "" : infos.tip}
                   onChange={(e) =>
                     setInfos((prev) => ({
                       ...prev,
@@ -92,6 +94,7 @@ function App() {
               img={icon_person}
               name="numberPeople"
               handle_change={handle_change}
+              value={infos.numberPeople}
             />
           </div>
         </section>

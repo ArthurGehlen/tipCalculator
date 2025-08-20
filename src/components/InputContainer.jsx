@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
-
 import "./InputContainer.css";
 
-function InputContainer({ label, img, name, handle_change }) {
+function InputContainer({ label, img, name, handle_change, value }) {
   return (
     <div className="input_container">
       <label htmlFor={label}>{label}</label>
@@ -16,16 +15,18 @@ function InputContainer({ label, img, name, handle_change }) {
           placeholder="0"
           name={name}
           id={label}
+          value={value === 0 ? "" : value} 
         />
       </div>
     </div>
   );
 }
 
-InputContainer.PropTypes = {
+InputContainer.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   handle_change: PropTypes.func,
+  value: PropTypes.number, 
 };
 
 export default InputContainer;

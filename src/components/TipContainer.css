@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 #tip_container p {
@@ -16,9 +16,18 @@
 }
 
 #tip_container:hover {
-    background-color: hsla(172, 67%, 45%, .6);   
+  background-color: hsla(172, 67%, 45%, 0.6);
 }
 
 #tip_container:hover p {
-    color: hsl(183, 100%, 15%);
+  color: hsl(183, 100%, 15%);
+}
+
+#tip_container.selected {
+  background-color: hsl(172, 67%, 45%);
+}
+
+#tip_container.selected p {
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
 }

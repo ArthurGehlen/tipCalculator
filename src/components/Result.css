@@ -22,3 +22,9 @@
     font-size: 2.75rem;
     color: hsl(172, 67%, 45%);
 }
+
+@media screen and (max-width: 468px) {
+    #result .total {
+        font-size: 2rem;
+    }   
+}
